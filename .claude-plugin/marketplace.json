@@ -1,0 +1,12 @@
+{
+  "name": "codex-dev",
+  "owner": { "name": "zoo3323", "email": "joo24587@gmail.com" },
+  "description": "zoo3323의 codex-dev 플러그인",
+  "plugins": [
+    {
+      "name": "codex-dev",
+      "source": "./plugins/codex-dev",
+      "description": "Codex에게 구현을 위임하고 Claude가 검수하는 워크플로우 스킬"
+    }
+  ]
+}
