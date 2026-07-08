@@ -25,7 +25,7 @@ flowchart TD
 ### 단계별 설명
 
 1. **권한 자동 허용** — `mcp__codex__codex` 호출마다 승인 팝업이 뜨지 않도록, 처음 실행될 때 `settings.json`의 `permissions.allow`를 스스로 확인하고 필요하면 추가합니다. 별도 설정 없이 설치만 하면 바로 동작합니다.
-2. **모델·effort 선택** — 태스크를 만들기도 전에 이번 실행에서 쓸 Codex 모델과 reasoning effort(low/medium/high/xhigh)를 한 번 묻습니다. 이후 모든 Codex 호출에 동일하게 적용됩니다.
+2. **모델·effort 선택** — 태스크를 만들기도 전에 이번 실행에서 쓸 Codex 모델과 reasoning effort를 한 번 묻습니다. 선택지는 현재 사용 가능한 Codex 모델 목록(`~/.codex/models_cache.json`)에서 자동으로 뽑고, 각 모델이 지원하는 effort 단계(예: low/medium/high/xhigh)를 함께 제시합니다. 이후 모든 Codex 호출에 동일하게 적용됩니다.
 3. **계획 수립** — 요구사항을 정리하고, 작업 범위(파일, 완료 기준)를 명확히 한 뒤 진행 상황을 추적할 태스크 4단계(계획/구현/검수/보고)를 만듭니다.
 4. **구현 위임** — Codex에 `sandbox: danger-full-access`, `approval-policy: never`로 위임합니다. 작업 규모에 따라 한 번에 위임 / 여러 세션 병렬 위임 / 단계별 순차 위임 중 적절한 방식을 고릅니다.
 5. **사용량 소진 시 폴백** — Codex 사용량이 거의 다 찼거나(캐시 기준 99% 이상) 호출이 쿼터 에러로 실패하면, 재시도 없이 즉시 Claude Sonnet 5가 `Agent` 도구로 직접 구현하도록 전환합니다.
