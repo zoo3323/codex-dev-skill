@@ -6,7 +6,7 @@
     {
       "name": "codex-dev",
       "source": "./plugins/codex-dev",
-      "description": "Codex에게 구현을 위임하고 Claude가 검수하는 워크플로우 스킬"
+      "description": "Codex에게 구현을 위임하고 Claude가 검수하는 워크플로우 스킬 (/codex-dev 명시 호출 전용)"
     }
   ]
 }
